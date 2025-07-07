@@ -25,6 +25,7 @@ Columns:
 ✅ pandas is optional — recommended for easier CSV work
 ✅ Cloud-agnostic: Works with local Jupyter Notebook, JupyterLite, or any
 free hosted option that supports standard Python.
+
 ✅ What You Need to Do
 1) Extract
 -Download the CSV file (either manually or with a simple Python 
