@@ -1,6 +1,5 @@
 # Mini_Project_Data_Engineer
 Praktikum
-Data Engineering Intern Mini Project
 Objective:
 Show that you can handle a basic ETL process:
 -Extract data from a CSV
@@ -73,8 +72,4 @@ Submit ONE notebook (.ipynb) that:
 -Has the CSV reading, cleaning, loading, and SQL queries
 -Shows your query results
 -Includes clear markdown explanations
-- Time Limit
-Target: Less than one day (5–8 hours). Keep it simple and clean.
-If you need help with SQLite basics:
-👉 https://docs.python.org/3/library/sqlite3.html
-Good luck — and enjoy your first mini ETL! 
+
