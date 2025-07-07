@@ -1,4 +1,5 @@
-Mini Data Engineering Project: ETL with SQLite
+# Mini Data Engineering Project: ETL with SQLite
+
 🧪 Praktikum (Practical Exercise)
 🎯 Objective
 This project demonstrates a basic ETL (Extract, Transform, Load) pipeline using only free and lightweight tools.
@@ -15,7 +16,8 @@ You will:
 
 Everything is done in a single Jupyter Notebook, with no external servers or cloud dependencies.
 
-📦Dataset
+
+#📦Dataset
 We’re using a sample retail sales dataset with around 1,000 rows. Each row represents a product sale and contains:
 | Column     | Description                      |
 | ---------- | -------------------------------- |
@@ -26,7 +28,8 @@ We’re using a sample retail sales dataset with around 1,000 rows. Each row rep
 | `quantity` | Number of units sold             |
 | `revenue`  | Total revenue = price × quantity |
 
-Tools & Requirements
+
+#Tools & Requirements
 ✅ Python 3.x
 
 ✅ SQLite (built into Python via the sqlite3 module)
@@ -35,7 +38,8 @@ Tools & Requirements
 
 ✅ Optional: pandas (recommended for easier CSV and SQL handling)
 
-🧪 What You’ll Do
+
+#🧪 What You’ll Do
 1️⃣ Extract
 Load the CSV file using either:
 
@@ -86,7 +90,8 @@ Run these 6 SQL queries on the loaded data:
 
 🗓 Total revenue for each quarter (Q1–Q4)
 
-💡 Tips
+
+#💡 Tips
 Use standard SQL (ANSI SQL)
 
 Keep your code well-organized using sections and markdown cells
@@ -95,7 +100,8 @@ Use pandas.read_sql_query() if you're working with pandas to view SQL results as
 
 If not using pandas, handle data type conversions carefully with built-in Python modules
 
-Deliverable
+
+#Deliverable
 You will submit one Jupyter Notebook (.ipynb) that:
 
 Runs end-to-end (Restart and Run All should work)
