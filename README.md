@@ -1,76 +1,107 @@
-# Mini_Project_Data_Engineer
-Praktikum
-Objective:
-Show that you can handle a basic ETL process:
--Extract data from a CSV
--Transform it (clean, check, add useful fields)
--Load it into a SQL database
--Run simple SQL queries for analysis
-Do this in one Jupyter Notebook using only free tools — your local 
-Jupyter Notebook, JupyterLite, or any other cloud-agnostic option.
-🚀 Dataset
-Use this small sample retail sales CSV (about 1,000
-rows):
-👉 Download CSV
-Columns:
--date: date of sale (YYYY-MM-DD)
--product: product name
--category: product category
--price: unit price in USD
--quantity: number of units sold
--revenue: total sale revenue (should be price * quantity)
-🚀 🚀 Tools
-✅ Use Python 3.x
-✅ Use SQLite (built into Python) for the database — no servers, no setup
-✅ pandas is optional — recommended for easier CSV work
-✅ Cloud-agnostic: Works with local Jupyter Notebook, JupyterLite, or any
-free hosted option that supports standard Python.
+Mini Data Engineering Project: ETL with SQLite
+🧪 Praktikum (Practical Exercise)
+🎯 Objective
+This project demonstrates a basic ETL (Extract, Transform, Load) pipeline using only free and lightweight tools.
 
-✅ What You Need to Do
-1) Extract
--Download the CSV file (either manually or with a simple Python 
-download command).
--Place it in your working directory so your notebook can read it.
-2) Transform
--Load the CSV data:
-oUse pandas (pd.read_csv()) if you want — it makes CSV 
-reading and type conversion easier.
-oIf you don’t want pandas, use Python’s csv module.
--Check for missing or invalid data.
--Make sure numeric fields (price, quantity, revenue) are numeric.
--Add a new column: quarter (Q1–Q4) based on the date.
--Optionally verify that revenue = price * quantity.
-3) Load
--Create a new SQLite database file (sqlite3.connect()).
--Create a sales_data table with the right columns.
--Load the transformed data into this table.
-oIf using pandas, use DataFrame.to_sql().
-oIf not using pandas, use cursor.executemany() with prepared 
-statements.
--Check that the data is there (e.g., SELECT COUNT(*)).
-4) Analyze
-Write 6 SQL queries to answer:
-1. Total revenue for all sales.
-2. Total quantity sold.
-3. Average product price.
-4. Product with the highest total revenue.
-5. Category with the highest total revenue.
-6. Total revenue for each quarter (Q1–Q4).
-Run each query, show the results, and briefly note your finding.
-🚀 Helpful Hints
-✔️  Use standard ANSI SQL.
-✔️  Keep your code clear — headings for each part.
-✔️  Add short markdown notes to explain what’s happening.
-✔️  If you use pandas:
--It’s fine to do CSV and SQLite both with pandas (read_csv, to_sql).
--Use read_sql_query() to run SQL and see results in DataFrames.
-✔️  If you don’t use pandas:
--Use Python’s sqlite3 and csv modules only.
--Loop through your data carefully, convert types where needed.
-🚀 Deliverable
-Submit ONE notebook (.ipynb) that:
--Runs end-to-end (restart & run all to test!)
--Has the CSV reading, cleaning, loading, and SQL queries
--Shows your query results
--Includes clear markdown explanations
+You will:
 
+✅ Extract data from a CSV file
+
+✅ Transform the data (clean, validate, enrich)
+
+✅ Load the data into a SQLite database
+
+✅ Analyze the data with simple SQL queries
+
+Everything is done in a single Jupyter Notebook, with no external servers or cloud dependencies.
+
+📦Dataset
+We’re using a sample retail sales dataset with around 1,000 rows. Each row represents a product sale and contains:
+| Column     | Description                      |
+| ---------- | -------------------------------- |
+| `date`     | Date of sale (YYYY-MM-DD)        |
+| `product`  | Name of the product sold         |
+| `category` | Product category                 |
+| `price`    | Unit price in USD                |
+| `quantity` | Number of units sold             |
+| `revenue`  | Total revenue = price × quantity |
+
+Tools & Requirements
+✅ Python 3.x
+
+✅ SQLite (built into Python via the sqlite3 module)
+
+✅ Jupyter Notebook (local or cloud-agnostic, e.g. JupyterLite)
+
+✅ Optional: pandas (recommended for easier CSV and SQL handling)
+
+🧪 What You’ll Do
+1️⃣ Extract
+Load the CSV file using either:
+
+pandas.read_csv(), or
+
+Python’s built-in csv module
+
+Ensure it’s in your local directory for the notebook to read.
+
+2️⃣ Transform
+Clean and validate the data:
+
+Check for missing or invalid fields
+
+Ensure numeric columns (price, quantity, revenue) are correctly typed
+
+Optionally verify that revenue = price × quantity
+
+Add a new column:
+
+quarter (Q1–Q4) based on the date field
+
+3️⃣ Load
+Create a SQLite database file using sqlite3.connect()
+
+Define a table sales_data with appropriate columns
+
+Load the cleaned data:
+
+Use DataFrame.to_sql() if using pandas
+
+Or cursor.executemany() with SQL statements if not
+
+Verify the load (e.g., using SELECT COUNT(*))
+
+4️⃣ Analyze
+Run these 6 SQL queries on the loaded data:
+
+🔢 Total revenue for all sales
+
+🔢 Total quantity sold
+
+💲 Average product price
+
+🥇 Product with the highest total revenue
+
+🏆 Category with the highest total revenue
+
+🗓 Total revenue for each quarter (Q1–Q4)
+
+💡 Tips
+Use standard SQL (ANSI SQL)
+
+Keep your code well-organized using sections and markdown cells
+
+Use pandas.read_sql_query() if you're working with pandas to view SQL results as DataFrames
+
+If not using pandas, handle data type conversions carefully with built-in Python modules
+
+Deliverable
+You will submit one Jupyter Notebook (.ipynb) that:
+
+Runs end-to-end (Restart and Run All should work)
+
+Includes all steps: CSV loading, cleaning, transformation, SQLite loading, and SQL querying
+
+Displays query results clearly
+
+Includes markdown explanations throughout
